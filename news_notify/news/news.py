@@ -38,7 +38,7 @@ class NotifyNews:
                         sleep(Config.NOTIFY_SPAN)
                 self.notify_message(article)
 
-    def notify_message(self, article: dict):
+    def notify_message(self, article: dict) -> None:
         params = {
             "message": "\nNew article !!\n\n{title}\n{link}".format(
                 title=article["title"], link=article["link"]
